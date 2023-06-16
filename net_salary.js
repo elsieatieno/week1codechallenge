@@ -13,7 +13,7 @@ function calculateIncomeTax(taxPayable, rate){
  
 }
 const relief = 28_800;
-const payee = calculateIncomeTax - relief;
+const payee = calculateIncomeTax(taxPayable, rate)- relief;
 console.log(payee);
 
 function calculateNSSF(pension){
@@ -61,4 +61,6 @@ function calculateNHIF(salary){
  }
 } 
 
-const netSalary = grossSalary - (payee + calculateNHIF + calculateNHIF);
+const nssf = calculateNSSF(salary);
+const nhif = calculateNHIF(salary);
+const netSalary = grossSalary(salary,benefits) - (payee + nhif+ nssf);
