@@ -1,7 +1,9 @@
+// For getting the gross salary
 function grossSalary(salary, benefits){
     return salary + benefits;
 }
 
+// For calculating income tax after meeting certain conditions
 function calculateIncomeTax(taxPayable, rate){
     if(taxPayable < 288_000){
     return taxPayable * rate;
@@ -12,10 +14,13 @@ function calculateIncomeTax(taxPayable, rate){
  }
  
 }
+
+// For calculating the payee
 const relief = 28_800;
 const payee = calculateIncomeTax(taxPayable, rate)- relief;
 console.log(payee);
 
+// For determining NSSF category
 function calculateNSSF(pension){
  if(pension < 6_000){
     return "Tier 1";
@@ -23,6 +28,8 @@ function calculateNSSF(pension){
     return "Tier 2";
  }
 }
+
+// For determining NHIF amount after meeting a certain criteria
 function calculateNHIF(salary){
  if(salary < 5_999){
     return 150;
@@ -61,6 +68,11 @@ function calculateNHIF(salary){
  }
 } 
 
+// Placing nssf determinant in a container to make it easy to get
 const nssf = calculateNSSF(salary);
+
+// Placing nhif determinant in a container to make it easy to get
 const nhif = calculateNHIF(salary);
+
+// For calculating the net salary
 const netSalary = grossSalary(salary,benefits) - (payee + nhif+ nssf);
