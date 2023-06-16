@@ -1,3 +1,4 @@
+let studentName = prompt("What is your name: ");
 function gradeCalculator(marks){
     if(marks > 79){
         return "A";
@@ -12,4 +13,4 @@ function gradeCalculator(marks){
     }
 }
 
-gradeCalculator(10);
+gradeCalculator (80);
