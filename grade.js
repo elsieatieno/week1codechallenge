@@ -1,6 +1,9 @@
+// For the student name
 function studentName(name){
     return name;
 }
+
+// for calculating the grade
 function gradeCalculator(marks){
     if(marks > 79){
         return "A";
@@ -15,5 +18,6 @@ function gradeCalculator(marks){
     }
 }
 
+// calling function to get output
 studentName("Yukio");
 gradeCalculator(80);
