@@ -16,9 +16,7 @@ function speedDetector(speed){
 
 // For calculating points due to demerit
 function calculateDemerit(speed){
- if(speed < speedLimit){
-    return 0;
- } else if (speed > speedLimit){
+ if (speed > speedLimit){
    // For calculating points
     const points = Math.floor((speed - speedLimit) / 5) * pointsPerDemerit;
     return points;
