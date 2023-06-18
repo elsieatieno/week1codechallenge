@@ -48,7 +48,7 @@ function calculateNHIF(salary){
  } else if (salary > 30_000 && salary < 34_999){
     return 900;
  } else if (salary > 35_000 && salary < 39_999){
-    return 850;
+    return 950;
  } else if (salary > 40_000 && salary < 44_999){
     return 1_000;
  } else if (salary > 45_000 && salary < 49_999){

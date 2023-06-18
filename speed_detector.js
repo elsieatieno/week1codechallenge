@@ -1,4 +1,4 @@
-let speed;
+speed = 80;
 // Declaring the speed limit
 const speedLimit = 70;
 
@@ -10,7 +10,7 @@ function speedDetector(speed){
     if (speed < 70){
         return "OK";
     } else {
-      return calculateDemerit();
+      return calculateDemerit(speed);
     }
 }
 
