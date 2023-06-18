@@ -7,7 +7,7 @@ const pointsPerDemerit = 1;
 
 // To detect speed
 function speedDetector(speed){
-    if (speed < 70){
+    if (speed < speedLimit){
         return "OK";
     } else {
       return calculateDemerit(speed);
@@ -20,7 +20,11 @@ function calculateDemerit(speed){
    // For calculating points
     const points = Math.floor((speed - speedLimit) / 5) * pointsPerDemerit;
     return points;
- } else if(points === 12){
-    return "License Suspended";
- }
+ } 
+}
+
+function calculatePoints(calculateDemerit){
+  if(calculateDemerit(speed) > 12){
+    return "License Suspended"
+  }
 }
