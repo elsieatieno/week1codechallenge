@@ -14,7 +14,7 @@ function gradeCalculator(marks){
     } else if(marks > 40 && marks < 49){
         return "D";
     } else{
-        return "E";
+        return "Fail";
     }
 }
 
